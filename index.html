@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet", href="style.css">
+    <link rel="stylesheet", href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Manmohan Boyina</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Manmohan Boyina</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="togglemenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+                
+            </div>
+            
+            <div class="menu-links">
+                <li><a href="#about" onclick="togglemenu()">About</a></li>
+                <li><a href="#experience" onclick="togglemenu()">Experience</a></li>
+                <li><a href="#projects" onclick="togglemenu()">Projects</a></li>
+                <li><a href="#contact" onclick="togglemenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="Profile">
+        <div class="section__pic-container">
+            <img src="./assets/profile-pic.png" alt="Manmohan Boyina">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello I'm</p>
+            <h1 class="title">Manmohan Boyina</h1>
+            <p class="section__text__p2">Software Developer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/Manmohan_Boyina_Resume.pdf')">Download CV</button>
+                <button class="btn btn-color-1" onclick="location.href='./#Contact'">Contact Info</button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt="My Linkedin Profile" class="icon" onclick="location.href='https://www.linkedin.com/in/ManmohanBoyina'">
+                <img src="./assets/github.png" alt="My Github Profile" class="icon" onclick="location.href='https://www.github.com/ManmohanBoyina'">
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">Get to know more</p>
+        <p class="title">About Me</p>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="./assets/about-pic.png" alt="Profile Picture" class="about-pic">
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                <div class="details-container">
+                    <img src="./assets/experience.png" alt="experience icon" class="icon">
+                    <h3>Experience</h3>
+                    <p>3+ Years <br/>Software Developer</p>
+                </div>
+                <div class="details-container">
+                    <img src="./assets/education.png" alt="education icon" class="icon">
+                    <h3>Education</h3>
+                    <p>B.sc Bachelors Degree <br/>M.sc. Masters Degree</p> 
+                </div>
+                </div>
+                <div class="text-container">
+                    <p>I am a Master of Science in Computer Science candidate at Indiana University, with a Bachelor of Technology in Computer Science from Koneru Lakshmaiah University. I have professional experience as a Software Engineer at Verizon Data Services, where I contributed to system design, development, and deployment, improving efficiency and performance.</p>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'">
+    </section>
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+        <div class="about-containers" >
+            <div class="details-container"  >
+                <h2 class="experience-sub-title">Frontend Development</h2>
+                <div class="article-container"  >
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                        <div>
+                            <h3>HTML</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                        <div>
+                            <h3>CSS</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                        <div>
+                            <h3>Javascript</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                        <div>
+                            <h3>TypeScript</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                        <div>
+                            <h3>HTML</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </article>
+                </div> 
+        </div>
+        <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                    <div>
+                        <h3>Sprint Boot</h3>
+                        <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                    <div>
+                        <h3>NodeJS</h3>
+                        <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                    <div>
+                        <h3>ExpressJS</h3>
+                        <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                    <div>
+                        <h3>PostgreSQL</h3>
+                        <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                    <div>
+                        <h3>MongoDB</h3>
+                        <p>Experienced</p>
+                    </div>
+                </article>
+            </div>
+    </div>
+        </div>
+        <div class="about-contaiers">    <div class="details-container">
+            <h2 class="experience-sub-title">DevOps</h2>
+            <div class="article-container" style="justify-content:center    ">
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                    <div>
+                        <h3>AWS-S3</h3>
+                        <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                    <div>
+                        <h3>AWS-EC2</h3>
+                        <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                    <div>
+                        <h3>AWS-SQS</h3>
+                        <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                    <div>
+                        <h3>AWS-IAM</h3>
+                        <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                    <div>
+                        <h3>GCP</h3>
+                        <p>Experienced</p>
+                    </div>
+                </article>
+            </div>
+    </div></div>
+    </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'">
+        <div></div>
+    </section>
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+            <div class="details-container color-contaier">
+                <div class="article-container">
+                    <img src="./assets/project-1.png" alt="project 1" class="project-img">
+                </div>
+                <h2 class="experience-sub-title project-title">Project One</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ManmohanBoyina/Event-Management-System-BackEnd'">
+                        Github
+                    </button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ManmohanBoyina/Event-Management-System-BackEnd'">
+                        Live Demo
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-contaier">
+                <div class="article-container">
+                    <img src="./assets/project-1.png" alt="project 1" class="project-img">
+                </div>
+                <h2 class="experience-sub-title project-title">Project Two</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ManmohanBoyina/Event-Management-System-BackEnd'">
+                        Github
+                    </button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ManmohanBoyina/Event-Management-System-BackEnd'">
+                        Live Demo
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-contaier">
+                <div class="article-container">
+                    <img src="./assets/project-1.png" alt="project 1" class="project-img">
+                </div>
+                <h2 class="experience-sub-title project-title">Project Three</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ManmohanBoyina/Event-Management-System-BackEnd'">
+                        Github
+                    </button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ManmohanBoyina/Event-Management-System-BackEnd'">
+                        Live Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'">
+        <div></div>
+    </section>
+    <section id="contact">
+        <p class="section__text__p1">Get In Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon">
+                <p><a href="mailto:mboyina@iu.edu">mboyina@iu.edu</p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./assets/linkedin.png" alt="Email icon" class="icon contact-icon">
+                <div><a href="https://www.linkedin.com/in/manmohanboyina">Linkedin</a></div>
+            </div>
+            <div class="contact-info-container">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 1 26 26" >
+                    <path d="M7.978 4a2.553 2.553 0 0 0-1.926.877C4.233 6.7 3.699 8.751 4.153 10.814c.44 1.995 1.778 3.893 3.456 5.572 1.68 1.679 3.577 3.018 5.57 3.459 2.062.456 4.115-.073 5.94-1.885a2.556 2.556 0 0 0 .001-3.861l-1.21-1.21a2.689 2.689 0 0 0-3.802 0l-.617.618a.806.806 0 0 1-1.14 0l-1.854-1.855a.807.807 0 0 1 0-1.14l.618-.62a2.692 2.692 0 0 0 0-3.803l-1.21-1.211A2.555 2.555 0 0 0 7.978 4Z"/>
+                  </svg>
+                  <p style="color:black">+1-8129743620</p>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <nav style="justify-content:center" >
+            <div class="nav-links-container" style="color:rgb(51, 51, 185)">
+                <ul class="nav-links" >
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2024 Manmohan Boyina. All Rights Reserved.  </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+  

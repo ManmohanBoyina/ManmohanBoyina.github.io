@@ -42,7 +42,7 @@ nav {
 .nav-links {
   gap: 2rem;
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 a {
@@ -202,6 +202,7 @@ section {
   font-size: 3rem;
   text-align: center;
 }
+
 
 #socials-container {
   display: flex;
@@ -379,9 +380,13 @@ article .icon {
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
+  width: 91%;
   height: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 
 .project-title {
   margin: 1rem;

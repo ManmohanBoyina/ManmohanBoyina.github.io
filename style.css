@@ -93,8 +93,6 @@ a:hover {
   transition: all 0.3 ease-in-out;
 }
 
-/* MENU LINKS */
-
 .menu-links {
   position: absolute;
   top: 100%;
@@ -136,6 +134,18 @@ a:hover {
   transform: rotate(-45deg) translate(10px, -5px);
 }
 
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
 /* SECTIONS */
 
 section {
@@ -157,6 +167,7 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+
 }
 
 .section__pic-container {
@@ -164,9 +175,12 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+ 
+ 
 }
 
 .section__text {
+    
   align-self: center;
   text-align: center;
 }
@@ -188,6 +202,7 @@ section {
   font-size: 3rem;
   text-align: center;
 }
+
 
 #socials-container {
   display: flex;
@@ -261,16 +276,19 @@ section {
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  
 }
 
 .about-details-container {
   justify-content: center;
   flex-direction: column;
+  
 }
 
 .about-containers,
 .about-details-container {
   display: flex;
+  
 }
 
 .about-pic {
@@ -291,6 +309,19 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  /* font-size: 11.5px; */
+  
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
 }
 
 /* EXPERIENCE SECTION */
@@ -318,8 +349,10 @@ section {
   flex-wrap: wrap;
   flex-direction: row;
   gap: 1rem;
+  /* justify-content: space-around; */
   overflow-y: auto;
   max-height: 300px;
+  
 }
 
 article {
@@ -327,6 +360,11 @@ article {
   width: 10rem;
   justify-content: space-around;
   gap: 0.5rem;
+  /* flex: 1 1 45%; */
+}
+
+article .icon {
+  cursor: default;
 }
 
 /* PROJECTS SECTION */
@@ -349,13 +387,6 @@ article {
   margin-right: auto;
 }
 
-/* Updated project card with buttons aligned at the bottom */
-.details-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
 
 .project-title {
   margin: 1rem;
@@ -365,12 +396,6 @@ article {
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
-}
-
-.btn-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: auto; /* Pushes buttons to the bottom */
 }
 
 /* CONTACT */

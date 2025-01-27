@@ -378,7 +378,7 @@ article .icon {
   background: rgb(250, 250, 250);
 }
 
-project-img {
+.project-img {
     border-radius: 2rem;
     width: 91%;
     height: 90%;
@@ -386,7 +386,9 @@ project-img {
     margin-left: auto;
     margin-right: auto;
 }
-
+.details-container {
+    cursor: pointer; /* Changes the cursor to a hand on hover */
+}
 
 .project-title {
   margin: 1rem;

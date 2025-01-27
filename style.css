@@ -378,11 +378,13 @@ article .icon {
   background: rgb(250, 250, 250);
 }
 
-.project-img {
-    width: 100%; /* Ensure the image fits the container's width */
-    height: auto; /* Maintain the aspect ratio */
-    overflow: hidden; /* Prevent content overflow */
-    display: block; /* Remove any inline spacing issues */
+project-img {
+    border-radius: 2rem;
+    width: 91%;
+    height: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 

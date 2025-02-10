@@ -45,6 +45,18 @@ nav {
   font-size: 1.3rem;
 }
 
+.navlinks {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.3rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.navlinks:hover{
+  transform: scale(1.05); /* Zooms the entire container */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow for emphasis */
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -99,10 +111,11 @@ a:hover {
   right: 0;
   background-color: white;
   width: fit-content;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  max-height: 300px; /* Set a fixed height or remove this property */
+  overflow: visible; /* Ensure it's not hidden */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .menu-links a {
   display: block;
@@ -111,12 +124,17 @@ a:hover {
   font-size: 1.5rem;
   color: black;
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links a:hover {
+  color: #666; /* Change link color on hover */
 }
 
 .menu-links li {
   list-style: none;
 }
+
 
 .menu-links.open {
   max-height: 300px;
@@ -161,6 +179,7 @@ section {
 }
 
 /* PROFILE SECTION */
+
 
 #Profile {
   display: flex;
@@ -216,6 +235,12 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+  transition: all 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.10); /* Zooms the entire container */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow for emphasis */
 }
 
 /* BUTTONS */
@@ -299,7 +324,16 @@ section {
   position: absolute;
   right: -5rem;
   bottom: 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+.arrow:focus,
+.arrow:hover {
+  outline: none; /* Remove the outline */
+  box-shadow: none; /* Remove any shadow effects */
+}
+
 
 .details-container {
   padding: 1.5rem;

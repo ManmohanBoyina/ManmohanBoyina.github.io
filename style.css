@@ -355,6 +355,11 @@ section {
   
 }
 
+.details-container:hover {
+  transform: scale(1.05); /* Zooms the entire container */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow for emphasis */
+}
+
 article {
   display: flex;
   width: 10rem;
@@ -420,6 +425,11 @@ article .icon {
   padding: 0.5rem;
 }
 
+.contact-info-upper-container:hover {
+  transform: scale(1.05); /* Zooms the entire container */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow for emphasis */
+  transition: all 0.3s ease;
+}
 .contact-info-container {
   display: flex;
   align-items: center;
@@ -501,3 +511,4 @@ body.dark-mode button:hover {
   color: #555;
   border-top: 1px solid #ddd;
 }
+

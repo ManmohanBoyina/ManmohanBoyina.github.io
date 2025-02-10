@@ -6,21 +6,28 @@ function togglemenu(){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const toggleButton = document.getElementById('dark-mode-toggle');
-  const body = document.body;
+  const experienceContainer = document.getElementById('experience-container');
+  const additionalExperienceDetails = document.getElementById('additional-details');
 
-  // Check localStorage for dark mode preference
-  if (localStorage.getItem('dark-mode') === 'enabled') {
-    body.classList.add('dark-mode');
-  }
+  const educationContainer = document.getElementById('education-container');
+  const additionalEducationDetails = document.getElementById('education-details');
 
-  toggleButton.addEventListener('click', () => {
-    if (body.classList.contains('dark-mode')) {
-      body.classList.remove('dark-mode');
-      localStorage.setItem('dark-mode', 'disabled');
-    } else {
-      body.classList.add('dark-mode');
-      localStorage.setItem('dark-mode', 'enabled');
-    }
+  // Toggle for Experience Container
+  experienceContainer.addEventListener('click', () => {
+      if (additionalExperienceDetails.style.display === 'none' || additionalExperienceDetails.style.display === '') {
+          additionalExperienceDetails.style.display = 'block';
+      } else {
+          additionalExperienceDetails.style.display = 'none';
+      }
+  });
+
+  // Toggle for Education Container
+  educationContainer.addEventListener('click', () => {
+      if (additionalEducationDetails.style.display === 'none' || additionalEducationDetails.style.display === '') {
+          additionalEducationDetails.style.display = 'block';
+      } else {
+          additionalEducationDetails.style.display = 'none';
+      }
   });
 });
+

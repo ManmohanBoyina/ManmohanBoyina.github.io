@@ -450,3 +450,36 @@ footer {
 footer p {
   text-align: center;
 }
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #d0d0d0;
+}
+
+body.dark-mode button {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+body.dark-mode button:hover {
+  background-color: #444444;
+}
+

@@ -178,12 +178,15 @@ section {
 /* PROFILE SECTION */
 
 
+/* PROFILE SECTION */
 #Profile {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 5rem;
-  height: 80vh;
-
+  flex-wrap: wrap; /* Ensures content wraps correctly */
+  text-align: center;
+  padding: 2rem 5%;
 }
 
 .section__pic-container {

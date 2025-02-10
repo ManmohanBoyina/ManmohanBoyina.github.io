@@ -72,11 +72,14 @@ a:hover {
 
 .logo {
   font-size: 2rem;
+  transition: transform 0.3s ease-in-out; /* Smooth zoom transition */
 }
 
 .logo:hover {
   cursor: default;
+  transform: scale(1.1); /* Slight zoom effect */
 }
+
 
 /* HAMBURGER MENU */
 
@@ -213,9 +216,28 @@ section {
 }
 
 .section__text__p2 {
+  display: inline-block;
   font-size: 1.75rem;
-  margin-bottom: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black; /* Typing cursor effect */
+  animation: blink 0.7s infinite;
 }
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 290px; } /* Adjust based on text length */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.section__text__p2.typed {
+  border-right: none;
+}
+
+
 
 .title {
   font-size: 3rem;
@@ -238,9 +260,13 @@ section {
   transition: all 0.3s ease;
 }
 
+
+.icon:focus,
 .icon:hover {
     transform: scale(1.10); /* Zooms the entire container */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow for emphasis */
+    outline: none; /* Remove the outline */
+    box-shadow: none; /* Remove any shadow effects */
 }
 
 /* BUTTONS */
@@ -546,4 +572,3 @@ body.dark-mode button:hover {
   color: #555;
   border-top: 1px solid #ddd;
 }
-

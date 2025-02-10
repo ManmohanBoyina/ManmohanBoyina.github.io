@@ -31,3 +31,33 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const textElement = document.getElementById("typing-text");
+  const text = "Full Stack Developer";
+  let index = 0;
+  const speed = 100; // Typing speed in milliseconds
+
+  // Reset text content and add the cursor effect again
+  textElement.innerHTML = ""; 
+  textElement.classList.remove("typed"); // Ensure the cursor is visible again
+
+  function typeEffect() {
+    if (index < text.length) {
+      textElement.innerHTML = text.substring(0, index + 1);
+      index++;
+      setTimeout(typeEffect, speed);
+    } else {
+      // Remove the cursor after typing is complete
+      setTimeout(() => {
+        textElement.classList.add("typed"); // Remove border-right cursor
+      }, 500);
+    }
+  }
+
+  // Start typing effect on page load
+  typeEffect();
+});
+
+
+
+

@@ -1,9 +1,12 @@
-function togglemenu(){
-    const menu=document.querySelector(".menu-links");
-    const icon=document.querySelector(".hamburger-icon");
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
+function togglemenu() {
+  const menu = document.querySelector('.menu-links');
+  const icon = document.querySelector('.hamburger-icon');
+
+  // Toggle the menu visibility
+  menu.classList.toggle('open');
+  icon.classList.toggle('open');
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const experienceContainer = document.getElementById('experience-container');

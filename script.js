@@ -61,6 +61,37 @@ document.addEventListener("DOMContentLoaded", function () {
   typeEffect();
 });
 
+// Firebase configuration (Replace with your credentials)
+const firebaseConfig = {
+  apiKey: "AIzaSyCyBiEQEMPzVKWLowat-GCGEEQhU0zCwRk",
+  authDomain: "portfolio-analysis-c8691.firebaseapp.com",
+  projectId: "portfolio-analysis-c8691",
+  storageBucket: "portfolio-analysis-c8691.firebasestorage.app",
+  messagingSenderId: "532713325790",
+  appId: "1:532713325790:web:f5f02be855159fde6f6e4f",
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+// Track and Update View Count
+document.addEventListener("DOMContentLoaded", function () {
+  const viewsRef = db.collection("portfolio").doc("views");
+
+  viewsRef.get().then((doc) => {
+    if (doc.exists) {
+      let newViews = doc.data().count + 1;
+      viewsRef.update({ count: newViews });
+      document.getElementById("view-count").textContent = newViews;
+    } else {
+      viewsRef.set({ count: 1 });
+      document.getElementById("view-count").textContent = 1;
+    }
+  }).catch((error) => {
+    console.error("Error getting views:", error);
+  });
+});
 
 
 

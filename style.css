@@ -7,6 +7,11 @@
   padding: 0;
 }
 
+h3 {
+  font-size: 1.1rem; /* Adjust font size if needed */
+  white-space: nowrap; /* Ensures title doesn’t wrap */
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -285,6 +290,7 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+  margin-right: 5px;
   transition: all 0.3s ease;
 }
 
@@ -436,10 +442,12 @@ section {
   text-align: initial;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 1rem;
+  gap: 12px;
   /* justify-content: space-around; */
   overflow-y: auto;
   max-height: 300px;
+  flex: 1; /* Allows text to take available space */
+  min-width: 120px; /* Ensures text block has enough width */
   
 }
 
@@ -453,6 +461,7 @@ article {
   width: 10rem;
   justify-content: space-around;
   gap: 0.5rem;
+  white-space: nowrap; 
   /* flex: 1 1 45%; */
 }
 

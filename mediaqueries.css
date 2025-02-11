@@ -59,6 +59,8 @@
     article {
       font-size: 1rem;
     }
+    .article-container {
+      justify-content: center;}
     footer nav {
       height: fit-content;
       margin-bottom: 2rem;

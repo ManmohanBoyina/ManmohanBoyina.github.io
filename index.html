@@ -6,8 +6,12 @@
     <title>My Portfolio</title>
     <link rel="stylesheet", href="style.css">
     <link rel="stylesheet", href="mediaqueries.css">
-    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js"></script>
+<!-- Firebase v9 (Compatibility Mode) -->
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+
+<!-- Your script.js must be loaded after Firebase -->
+<script src="script.js" defer></script>
 
 </head>
 <body>
@@ -186,7 +190,7 @@
         </div>
         <div class="about-contaiers">    <div class="details-container">
             <h2 class="experience-sub-title">DevOps</h2>
-            <div class="article-container" style="justify-content:center    ">
+            <div class="article-container" >
                 <article>
                     <img src="./assets/checkmark.png" alt="Experience" class="icon">
                     <div>
@@ -276,7 +280,7 @@
             </div>
             
         </div >
-        <p>Total Views: <span id="view-count">0</span></p>
+        <h4 class="views">Total Views: <span id="view-count">1</span></h4>
     </section>
     <footer>
         <nav style="justify-content:center" >

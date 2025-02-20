@@ -222,13 +222,12 @@ section {
   font-size: 1.75rem;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid black; /* Typing cursor effect */
-  animation: blink 0.7s infinite;
+  animation: typing 2s steps(20) infinite alternate-reverse;
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to { width: 290px; } /* Adjust based on text length */
+  from { width: 0ch; }
+  to { width: 390px; } /* Adjust based on text length */
 }
 
 @keyframes blink {

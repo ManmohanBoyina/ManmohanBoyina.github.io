@@ -183,6 +183,28 @@ section {
 /* PROFILE SECTION */
 
 
+@keyframes scrollUp {
+  from {
+      bottom: -100%;
+      opacity: 0;
+    }
+    75% {
+        opacity: 1; /* Make sure it's visible */
+    }
+    to {
+        bottom: 10px; /* Adjust this to fine-tune landing position */
+        opacity: 1;
+    }
+}
+
+.animate {
+  position: relative;
+  bottom: -100%; /* Start from below the container */
+  animation: scrollUp 1s ease-in-out forwards;
+}
+
+
+
 /* PROFILE SECTION */
 #Profile {
   display: flex;
@@ -608,3 +630,5 @@ body.dark-mode button:hover {
   color: #555;
   border-top: 1px solid #ddd;
 }
+
+

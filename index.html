@@ -1,49 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Manmohan Boyina, a Full Stack Developer skilled in React, Node.js, and MongoDB. Explore my projects and experience.">
+    <meta name="keywords"
+        content="Full Stack Developer, React Developer, JavaScript, Node.js, MongoDB, Portfolio, Manmohan Boyina">
+    <meta name="author" content="Manmohan Boyina">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Manmohan Boyina - Full Stack Developer">
+    <meta property="og:description" content="Explore my portfolio to see my projects, experience, and contact details.">
+    <meta property="og:url" content="https://manmohanboyina.netlify.app">
+
     <title>My Portfolio</title>
-    <link rel="stylesheet", href="style.css">
-    <link rel="stylesheet", href="mediaqueries.css">
-<!-- Firebase v9 (Compatibility Mode) -->
-<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <link rel="stylesheet" , href="style.css">
+    <link rel="stylesheet" , href="mediaqueries.css">
+    <!-- Firebase v9 (Compatibility Mode) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
 
-<!-- Your script.js must be loaded after Firebase -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let paragraph = document.querySelector(".animate");
+    <!-- Your script.js must be loaded after Firebase -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let paragraph = document.querySelector(".animate");
 
-        function triggerAnimation() {
-            paragraph.style.animation = "none"; // Reset animation
-            void paragraph.offsetWidth; // Force reflow (restart animation)
-            paragraph.style.animation = "scrollUp 3s ease-out forwards"; // Restart animation
-        }
+            function triggerAnimation() {
+                paragraph.style.animation = "none"; // Reset animation
+                void paragraph.offsetWidth; // Force reflow (restart animation)
+                paragraph.style.animation = "scrollUp 3s ease-out forwards"; // Restart animation
+            }
 
-        // Intersection Observer to trigger when in view
-        let observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    triggerAnimation();
-                    observer.unobserve(entry.target); // Runs only once per view
-                }
+            // Intersection Observer to trigger when in view
+            let observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        triggerAnimation();
+                        observer.unobserve(entry.target); // Runs only once per view
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(paragraph);
+
+            // Ensure animation triggers when clicking on "About" in navbar
+            document.querySelector("a[href='#about']").addEventListener("click", function (e) {
+                setTimeout(() => {
+                    triggerAnimation(); // Restart animation when section is reached
+                }, 500); // Delay to ensure smooth scroll transition
             });
-        }, { threshold: 0.5 });
-
-        observer.observe(paragraph);
-
-        // Ensure animation triggers when clicking on "About" in navbar
-        document.querySelector("a[href='#about']").addEventListener("click", function (e) {
-            setTimeout(() => {
-                triggerAnimation(); // Restart animation when section is reached
-            }, 500); // Delay to ensure smooth scroll transition
         });
-    });
-</script>
+    </script>
 
 
 </head>
+
 <body>
     <nav id="desktop-nav">
         <div class="logo">Manmohan Boyina</div>
@@ -63,12 +75,13 @@
                 <span></span>
                 <span></span>
                 <span></span>
-                
+
             </div>
-            
+
             <div class="menu-links">
-            <div class="navlinks">
-                <li><a href="#about" onclick="togglemenu()">About</a></li> </div>
+                <div class="navlinks">
+                    <li><a href="#about" onclick="togglemenu()">About</a></li>
+                </div>
                 <li><a href="#experience" onclick="togglemenu()">Experience</a></li>
                 <li><a href="#projects" onclick="togglemenu()">Projects</a></li>
                 <li><a href="#contact" onclick="togglemenu()">Contact</a></li>
@@ -85,16 +98,20 @@
             <p class="section__text__p2">Full Stack Developer</p>
 
             <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/ManmohanBoyina_Resume.pdf', '_blank')">Download CV</button>
-                <button class="btn btn-color-1" onclick="window.open('https://www.github.com/ManmohanBoyina/Master-Chef', '_blank')">
+                <button class="btn btn-color-2"
+                    onclick="window.open('./assets/ManmohanBoyina_Resume.pdf', '_blank')">Download CV</button>
+                <button class="btn btn-color-1"
+                    onclick="window.open('https://www.github.com/ManmohanBoyina/Master-Chef', '_blank')">
                     Featured Project
-                  </button>
-                  
+                </button>
+
             </div>
             <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My Linkedin Profile" class="icon" onclick="window.open('https://www.linkedin.com/in/manmohanboyina', '_blank')">
-                <img src="./assets/github.png" alt="My Github Profile" class="icon" onclick="window.open('https://www.github.com/ManmohanBoyina', '_blank')">
-        </div>
+                <img src="./assets/linkedin.png" alt="My Linkedin Profile" class="icon"
+                    onclick="window.open('https://www.linkedin.com/in/manmohanboyina', '_blank')">
+                <img src="./assets/github.png" alt="My Github Profile" class="icon"
+                    onclick="window.open('https://www.github.com/ManmohanBoyina', '_blank')">
+            </div>
     </section>
     <section id="about">
         <p class="section__text__p1">Get to know more</p>
@@ -110,22 +127,28 @@
                         <h3>Experience</h3>
                         <p>3+ Years <br />Software Developer</p>
                         <div class="additional-details" id="additional-details" style="display: none;">
-                            <p>Worked on several full-stack projects including RESTful APIs, responsive UIs, and scalable backend systems. Expertise in React, Node.js, and MongoDB.</p>
+                            <p>Worked on several full-stack projects including RESTful APIs, responsive UIs, and
+                                scalable backend systems. Expertise in React, Node.js, and MongoDB.</p>
                         </div>
                     </div>
-                    
+
                     <div class="details-container" id="education-container">
                         <img src="./assets/education.png" alt="education icon" class="icon">
                         <h3>Education</h3>
                         <p>B.Sc Bachelor's Degree <br />M.Sc Master's Degree</p>
                         <div class="additional-details" id="education-details" style="display: none;">
-                            <p>Specialized in Computer Science. Bachelor's Degree from K L University. Master's Degree from Indiana University with a focus on Data Structures and Algorithms</Data>.</p>
+                            <p>Specialized in Computer Science. Bachelor's Degree from K L University. Master's Degree
+                                from Indiana University with a focus on Data Structures and Algorithms</Data>.</p>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="text-container">
-                    <p class="animate">I am a <b>Master of Science</b> in Computer Science candidate at Indiana University, with a <b>Bachelor of Technology</b> in Computer Science from Koneru Lakshmaiah University. I have professional experience as a <b>Software Engineer</b> at Verizon Data Services, where I contributed to system design, development, and deployment, improving efficiency and performance.</p>
+                    <p class="animate">I am a <b>Master of Science</b> in Computer Science candidate at Indiana
+                        University, with a <b>Bachelor of Technology</b> in Computer Science from Koneru Lakshmaiah
+                        University. I have professional experience as a <b>Software Engineer</b> at Verizon Data
+                        Services, where I contributed to system design, development, and deployment, improving
+                        efficiency and performance.</p>
                 </div>
             </div>
         </div>
@@ -135,130 +158,132 @@
         <p class="section__text__p1">Explore My</p>
         <h1 class="title">Experience</h1>
         <div class="experience-details-container">
-        <div class="about-containers" >
-            <div class="details-container"  >
-                <h2 class="experience-sub-title">Frontend Development</h2>
-                <div class="article-container">
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience" class="icon">
-                        <div>
-                            <h3>Javascript</h3>
-                            <p>Experienced</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience" class="icon">
-                        <div>
-                            <h3>React.js</h3>
-                            <p>Experienced</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience" class="icon">
-                        <div>
-                            <h3>React Native</h3>
-                            <p>Experienced</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience" class="icon">
-                        <div>
-                            <h3>HTML</h3>
-                            <p>Experienced</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience" class="icon">
-                        <div>
-                            <h3>CSS</h3>
-                            <p>Experienced</p>
-                        </div>
-                    </article>
-                </div> 
-        </div>
-        <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-                <article>
-                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
-                    <div>
-                        <h3>Node.js</h3>
-                        <p>Experienced</p>
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Frontend Development</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                            <div>
+                                <h3>Javascript</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                            <div>
+                                <h3>React.js</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                            <div>
+                                <h3>React Native</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                            <div>
+                                <h3>HTML</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                            <div>
+                                <h3>CSS</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
                     </div>
-                </article>
-                <article>
-                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
-                    <div>
-                        <h3>Express.js</h3>
-                        <p>Experienced</p>
-                    </div>
-                </article>
-                <article>
-                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
-                    <div>
-                        <h3>MongoDB</h3>
-                        <p>Experienced</p>
-                    </div>
-                </article>
-                <article>
-                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
-                    <div>
-                        <h3>PostgreSQL</h3>
-                        <p>Experienced</p>
-                    </div>
-                </article>
-                <article>
-                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
-                    <div>
-                        <h3>Java</h3>
-                        <p>Experienced</p>
-                    </div>
-                </article>
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Backend Development</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                            <div>
+                                <h3>Node.js</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                            <div>
+                                <h3>Express.js</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                            <div>
+                                <h3>MongoDB</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                            <div>
+                                <h3>PostgreSQL</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                            <div>
+                                <h3>Java</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
 
+                    </div>
+                </div>
             </div>
-    </div>
+            <div class="about-contaiers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">DevOps</h2>
+                    <div class="article-container" style="justify-content:center">
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                            <div>
+                                <h3>AWS-S3</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                            <div>
+                                <h3>AWS-EC2</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                            <div>
+                                <h3>AWS-SQS</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                            <div>
+                                <h3>AWS-IAM</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience" class="icon">
+                            <div>
+                                <h3>GCP</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="about-contaiers">    <div class="details-container">
-            <h2 class="experience-sub-title">DevOps</h2>
-            <div class="article-container" style="justify-content:center">
-                <article>
-                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
-                    <div>
-                        <h3>AWS-S3</h3>
-                        <p>Experienced</p>
-                    </div>
-                </article>
-                <article>
-                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
-                    <div>
-                        <h3>AWS-EC2</h3>
-                        <p>Experienced</p>
-                    </div>
-                </article>
-                <article>
-                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
-                    <div>
-                        <h3>AWS-SQS</h3>
-                        <p>Experienced</p>
-                    </div>
-                </article>
-                <article>
-                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
-                    <div>
-                        <h3>AWS-IAM</h3>
-                        <p>Experienced</p>
-                    </div>
-                </article>
-                <article>
-                    <img src="./assets/checkmark.png" alt="Experience" class="icon">
-                    <div>
-                        <h3>GCP</h3>
-                        <p>Experienced</p>
-                    </div>
-                </article>
-            </div>
-    </div></div>
-    </div>
         <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'">
         <div></div>
     </section>
@@ -267,31 +292,35 @@
         <h1 class="title">Projects</h1>
         <div class="experience-details-container">
             <div class="about-containers">
-            <div class="details-container color-contaier" onclick="window.open('https://github.com/ManmohanBoyina/Event-Management-System-FrontEnd.git','_blank')">
-                <div class="article-container"> 
-                    <img src="./assets/Stadium.webp" alt="project 1" class="project-img">
+                <div class="details-container color-contaier"
+                    onclick="window.open('https://github.com/ManmohanBoyina/Event-Management-System-FrontEnd.git','_blank')">
+                    <div class="article-container">
+                        <img src="./assets/Stadium.webp" alt="project 1" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">Event Mangement System</h2>
                 </div>
-                <h2 class="experience-sub-title project-title">Event Mangement System</h2>
-            </div>
-            <div class="details-container color-contaier" onclick="window.open('https://www.github.com/ManmohanBoyina/Master-Chef', '_blank')">
-                <div class="article-container">
-                    <img src="./assets/MasterChefIMg.webp" alt="project 1" class="project-img">
+                <div class="details-container color-contaier"
+                    onclick="window.open('https://www.github.com/ManmohanBoyina/Master-Chef', '_blank')">
+                    <div class="article-container">
+                        <img src="./assets/MasterChefIMg.webp" alt="project 1" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">Master Chef</h2>
                 </div>
-                <h2 class="experience-sub-title project-title">Master Chef</h2>
-            </div>
-            <div class="details-container color-contaier" onclick="window.open('https://github.com/ManmohanBoyina/DriverDrowsinessdetection.git','_blank')">
-                <div class="article-container">
-                    <img src="./assets/driver.webp" alt="project 1" class="project-img" width="1000">
+                <div class="details-container color-contaier"
+                    onclick="window.open('https://github.com/ManmohanBoyina/DriverDrowsinessdetection.git','_blank')">
+                    <div class="article-container">
+                        <img src="./assets/driver.webp" alt="project 1" class="project-img" width="1000">
+                    </div>
+                    <h2 class="experience-sub-title project-title">Driver Drowsiness Detection</h2>
                 </div>
-                <h2 class="experience-sub-title project-title">Driver Drowsiness Detection</h2>
-            </div>
-            <div class="details-container color-contaier" onclick="window.open('https://github.com/ManmohanBoyina/InsiderJobs.git','_blank')">
-                <div class="article-container">
-                    <img src="./assets/Insiderr.webp" alt="project 1" class="project-img" width="1000">
+                <div class="details-container color-contaier"
+                    onclick="window.open('https://github.com/ManmohanBoyina/InsiderJobs.git','_blank')">
+                    <div class="article-container">
+                        <img src="./assets/Insiderr.webp" alt="project 1" class="project-img" width="1000">
+                    </div>
+                    <h2 class="experience-sub-title project-title">Insider Jobs</h2>
                 </div>
-                <h2 class="experience-sub-title project-title">Insider Jobs</h2>
             </div>
-        </div>
         </div>
         <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'">
         <div></div>
@@ -309,19 +338,21 @@
                 <div><a href="https://www.linkedin.com/in/manmohanboyina">Linkedin</a></div>
             </div>
             <div class="contact-info-container">
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 1 26 26" >
-                    <path d="M7.978 4a2.553 2.553 0 0 0-1.926.877C4.233 6.7 3.699 8.751 4.153 10.814c.44 1.995 1.778 3.893 3.456 5.572 1.68 1.679 3.577 3.018 5.57 3.459 2.062.456 4.115-.073 5.94-1.885a2.556 2.556 0 0 0 .001-3.861l-1.21-1.21a2.689 2.689 0 0 0-3.802 0l-.617.618a.806.806 0 0 1-1.14 0l-1.854-1.855a.807.807 0 0 1 0-1.14l.618-.62a2.692 2.692 0 0 0 0-3.803l-1.21-1.211A2.555 2.555 0 0 0 7.978 4Z"/>
-                  </svg>
-                  <p style="color:black">+1-8129743620</p>
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    width="40" height="40" fill="currentColor" viewBox="0 1 26 26">
+                    <path
+                        d="M7.978 4a2.553 2.553 0 0 0-1.926.877C4.233 6.7 3.699 8.751 4.153 10.814c.44 1.995 1.778 3.893 3.456 5.572 1.68 1.679 3.577 3.018 5.57 3.459 2.062.456 4.115-.073 5.94-1.885a2.556 2.556 0 0 0 .001-3.861l-1.21-1.21a2.689 2.689 0 0 0-3.802 0l-.617.618a.806.806 0 0 1-1.14 0l-1.854-1.855a.807.807 0 0 1 0-1.14l.618-.62a2.692 2.692 0 0 0 0-3.803l-1.21-1.211A2.555 2.555 0 0 0 7.978 4Z" />
+                </svg>
+                <p style="color:black">+1-8129743620</p>
             </div>
-            
-        </div >
+
+        </div>
         <h4 class="views">Total Views: <span id="view-count">1</span></h4>
     </section>
     <footer>
-        <nav style="justify-content:center" >
+        <nav style="justify-content:center">
             <div class="nav-links-container" style="color:rgb(51, 51, 185)">
-                <ul class="nav-links" >
+                <ul class="nav-links">
                     <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -329,10 +360,9 @@
                 </ul>
             </div>
         </nav>
-        <p>Copyright &#169; 2024 Manmohan Boyina. All Rights Reserved.  </p>
+        <p>Copyright &#169; 2024 Manmohan Boyina. All Rights Reserved. </p>
     </footer>
     <script src="script.js"></script>
 </body>
-</html>
 
-  
+</html>

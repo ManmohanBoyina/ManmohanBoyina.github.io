@@ -8,11 +8,15 @@
 }
 
 h3 {
-  font-size: 1.1rem; /* Adjust font size if needed */
-  white-space: nowrap; /* Ensures title doesn’t wrap */
+  font-size: 1.1rem;
+  /* Adjust font size if needed */
+  white-space: nowrap;
+  /* Ensures title doesn’t wrap */
 }
+
 /* Ensure no horizontal scrolling */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -33,7 +37,6 @@ p {
 }
 
 /* TRANSITION */
-
 a,
 .btn {
   transition: all 300ms ease;
@@ -45,6 +48,8 @@ nav,
 .nav-links {
   display: flex;
 }
+
+
 
 nav {
   justify-content: space-around;
@@ -65,32 +70,51 @@ nav {
   transition: all 0.3s ease-in-out;
 }
 
-.navlinks:hover{
-  transform: scale(1.05); /* Zooms the entire container */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow for emphasis */
+.navlinks:hover {
+  transform: scale(1.05);
+  /* Zooms the entire container */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  /* Adds a shadow for emphasis */
 }
 
 a {
-  color: black;
+  position: relative;
   text-decoration: none;
-  text-decoration-color: white;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(181, 181, 181);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
 }
 
 a:hover {
   color: grey;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+}
+
+a:hover::after {
+  transform: scaleX(1);
 }
 
 .logo {
   font-size: 2rem;
-  transition: transform 0.3s ease-in-out; /* Smooth zoom transition */
+  transition: transform 0.3s ease-in-out;
+  /* Smooth zoom transition */
 }
 
 .logo:hover {
   cursor: default;
-  transform: scale(1.1); /* Slight zoom effect */
+  transform: scale(1.1);
+  /* Slight zoom effect */
 }
 
 
@@ -129,14 +153,16 @@ a:hover {
   right: 0;
   background-color: white;
   width: fit-content;
-  max-height: 0; /* Initially hidden */
+  max-height: 0;
+  /* Initially hidden */
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
 }
 
 /* SHOW MENU WHEN OPEN */
 .menu-links.open {
-  max-height: 300px; /* Adjust based on content */
+  max-height: 300px;
+  /* Adjust based on content */
   padding: 10px;
   overflow: visible;
 }
@@ -187,7 +213,6 @@ section {
 }
 
 
-
 .section-container {
   display: flex;
 }
@@ -197,21 +222,26 @@ section {
 
 @keyframes scrollUp {
   from {
-      bottom: -100%;
-      opacity: 0;
-    }
-    75% {
-        opacity: 1; /* Make sure it's visible */
-    }
-    to {
-        bottom: 10px; /* Adjust this to fine-tune landing position */
-        opacity: 1;
-    }
+    bottom: -100%;
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
+    /* Make sure it's visible */
+  }
+
+  to {
+    bottom: 10px;
+    /* Adjust this to fine-tune landing position */
+    opacity: 1;
+  }
 }
 
 .animate {
   position: relative;
-  bottom: -100%; /* Start from below the container */
+  bottom: -100%;
+  /* Start from below the container */
   animation: scrollUp 1s ease-in-out forwards;
 }
 
@@ -222,7 +252,8 @@ section {
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  flex-wrap: wrap; /* Ensures content wraps correctly */
+  flex-wrap: wrap;
+  /* Ensures content wraps correctly */
   text-align: center;
   padding: 2rem 5%;
   position: sticky;
@@ -234,12 +265,12 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
- 
- 
+
+
 }
 
 .section__text {
-    
+
   align-self: center;
   text-align: center;
 }
@@ -261,12 +292,21 @@ section {
 }
 
 @keyframes typing {
-  from { width: 0ch; }
-  to { width: 390px; } /* Adjust based on text length */
+  from {
+    width: 0ch;
+  }
+
+  to {
+    width: 390px;
+  }
+
+  /* Adjust based on text length */
 }
 
 @keyframes blink {
-  50% { border-color: transparent; }
+  50% {
+    border-color: transparent;
+  }
 }
 
 .section__text__p2.typed {
@@ -295,22 +335,42 @@ section {
 
 /* Make buttons adjust width based on text */
 .btn {
-  display: inline-flex; /* Flex ensures proper alignment */
-  align-items: center; /* Vertically centers text */
-  justify-content: center; /* Horizontally centers text */
+  display: inline-flex;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
   font-weight: 600;
-  padding: 1rem 1.5rem; /* Consistent spacing */
+  padding: 1rem 1.5rem;
   border-radius: 2rem;
   border: 1px solid rgb(53, 53, 53);
   transition: all 300ms ease;
-  white-space: nowrap; /* Prevents text wrapping */
-  text-align: center; /* Ensures text is centered */
+  white-space: nowrap;
+  text-align: center;
+  outline: none;
+  border: none;
 }
 
 .btn:hover {
-  background: rgb(53, 53, 53);
-  color: white;
+  cursor: pointer;
+  animation: jelly 0.5s;
 }
+
+@keyframes jelly {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
 
 /* Ensure consistent spacing for different text lengths */
 .btn-container {
@@ -331,10 +391,14 @@ section {
 
 .icon:focus,
 .icon:hover {
-    transform: scale(1.10); /* Zooms the entire container */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow for emphasis */
-    outline: none; /* Remove the outline */
-    box-shadow: none; /* Remove any shadow effects */
+  transform: scale(1.10);
+  /* Zooms the entire container */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  /* Adds a shadow for emphasis */
+  outline: none;
+  /* Remove the outline */
+  box-shadow: none;
+  /* Remove any shadow effects */
 }
 
 /* BUTTONS */
@@ -396,19 +460,19 @@ section {
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
-  
+
 }
 
 .about-details-container {
   justify-content: center;
   flex-direction: column;
-  
+
 }
 
 .about-containers,
 .about-details-container {
   display: flex;
-  
+
 }
 
 .about-pic {
@@ -425,13 +489,15 @@ section {
 
 .arrow:focus,
 .arrow:hover {
-  outline: none; /* Remove the outline */
-  box-shadow: none; /* Remove any shadow effects */
+  outline: none;
+  /* Remove the outline */
+  box-shadow: none;
+  /* Remove any shadow effects */
 }
 
 
 .details-container {
-  
+
   padding: 1.5rem;
   flex: 1;
   background: white;
@@ -440,7 +506,7 @@ section {
   border-color: rgb(163, 163, 163);
   text-align: center;
   /* font-size: 11.5px; */
-  
+
 }
 
 .section-container {
@@ -474,7 +540,7 @@ section {
 }
 
 .article-container {
-  
+
   display: flex;
   text-align: initial;
   flex-wrap: wrap;
@@ -483,14 +549,18 @@ section {
   /* justify-content: space-around; */
   overflow-y: auto;
   max-height: 300px;
-  flex: 1; /* Allows text to take available space */
-  min-width: 120px; /* Ensures text block has enough width */
-  
+  flex: 1;
+  /* Allows text to take available space */
+  min-width: 120px;
+  /* Ensures text block has enough width */
+
 }
 
 .details-container:hover {
-  transform: scale(1.05); /* Zooms the entire container */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow for emphasis */
+  transform: scale(1.05);
+  /* Zooms the entire container */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  /* Adds a shadow for emphasis */
 }
 
 article {
@@ -498,7 +568,7 @@ article {
   width: 10rem;
   justify-content: space-around;
   gap: 0.5rem;
-  white-space: nowrap; 
+  white-space: nowrap;
   /* flex: 1 1 45%; */
 }
 
@@ -513,7 +583,8 @@ article .icon {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Ensures full screen height */
+  min-height: 100vh;
+  /* Ensures full screen height */
   text-align: center;
   padding: 20px;
   position: sticky;
@@ -527,15 +598,17 @@ article .icon {
 }
 
 .project-img {
-    border-radius: 2rem;
-    width: 91%;
-    height: 90%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  border-radius: 2rem;
+  width: 91%;
+  height: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .details-container {
-    cursor: pointer; /* Changes the cursor to a hand on hover */
+  cursor: pointer;
+  /* Changes the cursor to a hand on hover */
 }
 
 .project-title {
@@ -570,10 +643,13 @@ article .icon {
 }
 
 .contact-info-upper-container:hover {
-  transform: scale(1.05); /* Zooms the entire container */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow for emphasis */
+  transform: scale(1.05);
+  /* Zooms the entire container */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  /* Adds a shadow for emphasis */
   transition: all 0.3s ease;
 }
+
 .contact-info-container {
   display: flex;
   align-items: center;
@@ -656,17 +732,15 @@ body.dark-mode button:hover {
   border-top: 1px solid #ddd;
 }
 
-        /* Modal Styles */
-        .modal {
-          display: none;
-          position: fixed;
-          z-index: 1000;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          overflow: auto;
-          background-color: rgba(0,0,0,0.7);
-      }
-
-
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}

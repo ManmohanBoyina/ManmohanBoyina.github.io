@@ -74,21 +74,18 @@
             }
         };
 
+        var tl = gsap.timeline({ defaults: { duration: 2, ease: "none" } });
 
-        gsap.utils.toArray(".section").forEach((section, i) => {
-            gsap.fromTo(section, 
-                { opacity: 0 }, 
-                {
-                    opacity: 1,
-                    scrollTrigger: {
-                        trigger: section,
-                        start: "top 80%",
-                        end: "top 20%",
-                        scrub: true
-                    }
-                }
-            );
+        tl.to(".section__text__p2", {
+          duration: 3,
+          scrambleText: {
+            text: "ScrambleText allows you to animate the scrambling of text.",
+            chars: "lowerCase",
+            revealDelay: 0.5,
+            tweenLength: false
+          }
         });
+        
         
     </script>
 </head>
@@ -410,7 +407,7 @@
         <div class="contact-info-upper-container">
             <div class="contact-info-container">
                 <img src="./assets/email.png" alt="Email icon" class="icon contact-icon">
-                <p><a href="mailto:mboyina@iu.edu">mboyina@iu.edu</p>
+                <p><a href="mailto:boyinamanmohan1999@gmail.com">Manmohan Boyina</p>
             </div>
             <div class="contact-info-container">
                 <img src="./assets/linkedin.png" alt="Email icon" class="icon contact-icon">

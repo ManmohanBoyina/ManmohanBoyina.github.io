@@ -27,29 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ✅ TYPING ANIMATION EFFECT
-document.addEventListener("DOMContentLoaded", function () {
-  const textElement = document.getElementById("typing-text");
-  const text = "Full Stack Developer";
-  let index = 0;
-  const speed = 100; // Typing speed in milliseconds
 
-  if (textElement) {
-    textElement.innerHTML = "";
-    textElement.classList.remove("typed");
-
-    function typeEffect() {
-      if (index < text.length) {
-        textElement.innerHTML = text.substring(0, index + 1);
-        index++;
-        setTimeout(typeEffect, speed);
-      } else {
-        setTimeout(() => textElement.classList.add("typed"), 500);
-      }
-    }
-
-    typeEffect();
-  }
-});
 
 // ✅ FIREBASE INITIALIZATION & VIEW COUNTER
 document.addEventListener("DOMContentLoaded", function () {

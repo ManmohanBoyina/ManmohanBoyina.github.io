@@ -77,16 +77,15 @@
         var tl = gsap.timeline({ defaults: { duration: 2, ease: "none" } });
 
         tl.to(".section__text__p2", {
-          duration: 3,
-          scrambleText: {
-            text: "ScrambleText allows you to animate the scrambling of text.",
-            chars: "lowerCase",
-            revealDelay: 0.5,
-            tweenLength: false
-          }
+            duration: 3,
+            scrambleText: {
+                text: "ScrambleText allows you to animate the scrambling of text.",
+                chars: "lowerCase",
+                revealDelay: 0.5,
+                tweenLength: false
+            }
         });
-        
-        
+
     </script>
 </head>
 
@@ -341,13 +340,14 @@
         <p class="section__text__p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
         <div class="experience-details-container">
-            <div class="about-containers">
+            <div class="about-containers1">
                 <div class="details-container color-container"
                     onclick="window.open('https://github.com/ManmohanBoyina/Event-Management-System-FrontEnd.git','_blank')">
                     <div class="article-container">
                         <img id="event-management-img" src="./assets/Stadium.webp" alt="Event Management System"
                             class="project-img">
                     </div>
+
                     <h2 class="experience-sub-title project-title">Event Management System</h2>
                 </div>
                 <div class="details-container color-contaier"
@@ -373,10 +373,10 @@
                     </div>
                     <h2 class="experience-sub-title project-title">Insider Jobs</h2>
                 </div>
+
             </div>
         </div>
         <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'">
-        <div></div>
     </section>
 
     <script>
@@ -396,6 +396,7 @@
 
         // Replace images with GitHub repo thumbnails
         setGitHubThumbnail('Event-Management-System-FrontEnd', 'event-management-img');
+        setGitHubThumbnail('Event-Management-System-FrontEnd', 'event-management-img1');
         setGitHubThumbnail('Master-Chef', 'master-chef-img');
         setGitHubThumbnail('DriverDrowsinessdetection', 'drowsiness-img');
         setGitHubThumbnail('InsiderJobs', 'insider-jobs-img');

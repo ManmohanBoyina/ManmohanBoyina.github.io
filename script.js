@@ -94,4 +94,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     observer.observe(viewCountElement);
   }
+
 });

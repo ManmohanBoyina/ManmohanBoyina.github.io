@@ -106,3 +106,14 @@ document.addEventListener("DOMContentLoaded", function () {
 //     document.body.classList.remove('dark-mode');
 //   }
 // });
+
+const toggleSwitch = document.querySelector('.bb8-toggle__checkbox');
+
+toggleSwitch.addEventListener('change', function () {
+  if (toggleSwitch.checked) {
+    document.body.classList.add('dark-mode'); // Enable dark mode
+  } else {
+    document.body.classList.remove('dark-mode'); // Disable dark mode
+  }
+});
+

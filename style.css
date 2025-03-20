@@ -416,7 +416,17 @@ section {
   transition: all 0.3s ease;
 }
 
-
+.icon1:focus,
+.icon1:hover {
+  transform: scale(1.10);
+  /* Zooms the entire container */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  /* Adds a shadow for emphasis */
+  outline: none;
+  /* Remove the outline */
+  box-shadow: none;
+  /* Remove any shadow effects */
+}
 
 .icon:focus,
 .icon:hover {

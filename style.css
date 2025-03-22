@@ -683,6 +683,7 @@ article .icon {
 
 /* PROJECTS SECTION */
 
+
 #projects {
   display: flex;
   flex-direction: column;
@@ -696,6 +697,16 @@ article .icon {
   overflow: hidden; /* ✅ restricts the scroll area */
   max-width: 1300px;  /* ✅ smaller window width (adjust as needed) */
   margin: 0 auto; 
+}
+
+.icon1.arrow1 {
+  width: 40px; /* Adjust width */
+  height: auto;
+  position: absolute; /* Make sure the image is positioned relative to its parent */
+  bottom: 5%; /* Adjust the top position as needed */
+  left: 97%; /* Center the image horizontally */
+  transform: translate(-50%, -50%); /* Center it vertically */
+  z-index: 10; /* Ensure the image is on top of other content */
 }
 
 

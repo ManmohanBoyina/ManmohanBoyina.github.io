@@ -187,7 +187,7 @@ a::after {
 
 /* HAMBURGER ICON ANIMATION */
 .hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translateY(12px) translateX(3.5px);
 }
 
 .hamburger-icon.open span:nth-child(2) {
@@ -195,7 +195,7 @@ a::after {
 }
 
 .hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translateX(-0.2px) translateY(-12px);
 }
 
 .content {

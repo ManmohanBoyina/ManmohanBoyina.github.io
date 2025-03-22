@@ -584,6 +584,7 @@ section {
 
 }
 
+
 .details-container1 {
 
   padding: 1.5rem;
@@ -596,6 +597,20 @@ section {
   /* font-size: 11.5px; */
 
 }
+
+body.dark-mode .details-container1 {
+
+  padding: 1.5rem;
+  flex: 1;
+  background: #121212;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(195, 195, 195);
+  text-align: center;
+  /* font-size: 11.5px; */
+
+}
+
 .section-container {
   gap: 4rem;
   height: 80%;
@@ -615,6 +630,13 @@ section {
 
 .experience-sub-title {
   color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+body.dark-mode .experience-sub-title {
+  color: rgb(255, 255, 255);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -708,8 +730,6 @@ article .icon {
   transform: translate(-50%, -50%); /* Center it vertically */
   z-index: 10; /* Ensure the image is on top of other content */
 }
-
-
 
 .color-container {
   border-color: rgb(163, 163, 163);
@@ -1007,6 +1027,29 @@ body.dark-mode {
   border: none;
   background-color: #000000;
   color: #ffffff;
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Ensures the button doesn't occupy space when hidden */
+  pointer-events: none; /* Prevents the button from being clicked while hidden */
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+  cursor: pointer;
+  font-weight: bold;
+  outline: 2px solid transparent;
+  overflow: hidden;
+}
+
+body.dark-mode .card-button {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+  background-color: #ffffff;
+  color: #000000;
   font-size: 1rem;
   padding: .5rem 1rem;
   position: absolute;
@@ -2036,8 +2079,25 @@ h3{
   color: #000;
 }
 
+body.dark-mode h3{
+  color: white;
+}
+
 body.dark-mode .section__text__p2{
   color: white;
+}
+
+body.dark-mode .details-container {
+
+  padding: 1.5rem;
+  flex: 1;
+  background: #121212;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+  /* font-size: 11.5px; */
+
 }
 
 body.dark-mode img.icon1{
@@ -2124,3 +2184,15 @@ body.dark-mode .card {
 
 body.dark-mode p.Phone{
 color: white;}
+
+body.dark-mode h3 {
+  font-size: 1.1rem;
+  /* Adjust font size if needed */
+  white-space: nowrap;
+  color: white;
+  /* Ensures title doesn’t wrap */
+}
+
+body.dark-mode p{
+  color: #ffffff;
+}

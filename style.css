@@ -453,7 +453,7 @@ section {
 .icon3 {
   cursor: pointer;
   height: 2rem;
-  margin-right: 5px;
+  margin-left: -40px;
   transition: all 0.3s ease;
 }
 

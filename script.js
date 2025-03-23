@@ -108,7 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // });
 
 const toggleSwitch = document.querySelector('.bb8-toggle__checkbox');
-
 toggleSwitch.addEventListener('change', function () {
   if (toggleSwitch.checked) {
     document.body.classList.add('dark-mode'); // Enable dark mode
@@ -117,3 +116,22 @@ toggleSwitch.addEventListener('change', function () {
   }
 });
 
+const darkModeIcon = document.querySelector('.dark-mode-icon'); // Target the icon
+
+// Function to toggle dark mode on icon click
+function toggleDarkModeOnIconClick() {
+  // Check if dark mode is already active
+  const isDarkMode = document.body.classList.contains('dark-mode');
+
+  // If dark mode is active, remove it; otherwise, add it
+  if (isDarkMode) {
+    document.body.classList.remove('dark-mode'); // Disable dark mode
+    darkModeIcon.classList.remove('active'); // Optionally remove active class on icon
+  } else {
+    document.body.classList.add('dark-mode'); // Enable dark mode
+    darkModeIcon.classList.add('active'); // Optionally add active class on icon
+  }
+}
+
+// Add click event listener to the icon
+darkModeIcon.addEventListener('click', toggleDarkModeOnIconClick);

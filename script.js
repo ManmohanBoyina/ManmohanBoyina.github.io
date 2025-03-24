@@ -108,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // });
 
 const toggleSwitch = document.querySelector('.bb8-toggle__checkbox');
+
 toggleSwitch.addEventListener('change', function () {
   if (toggleSwitch.checked) {
     document.body.classList.add('dark-mode'); // Enable dark mode
@@ -115,8 +116,6 @@ toggleSwitch.addEventListener('change', function () {
     document.body.classList.remove('dark-mode'); // Disable dark mode
   }
 });
-
-const darkModeIcon = document.querySelector('.dark-mode-icon'); // Target the icon
 
 // Function to toggle dark mode on icon click
 function toggleDarkModeOnIconClick() {
@@ -133,5 +132,17 @@ function toggleDarkModeOnIconClick() {
   }
 }
 
-// Add click event listener to the icon
-darkModeIcon.addEventListener('click', toggleDarkModeOnIconClick);
+// Get the checkbox input and the label
+const themeToggleCheckbox = document.querySelector('.theme-toggle input');  // Target the checkbox
+
+// Function to toggle dark mode based on the checkbox state
+function toggleDarkMode() {
+  if (themeToggleCheckbox.checked) {
+    document.body.classList.add('dark-mode'); // Enable dark mode
+  } else {
+    document.body.classList.remove('dark-mode'); // Disable dark mode
+  }
+}
+
+// Add an event listener to the checkbox to run the function when the checkbox is toggled
+themeToggleCheckbox.addEventListener('change', toggleDarkMode);

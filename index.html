@@ -14,7 +14,7 @@
     <meta property="og:title" content="Manmohan Boyina - Full Stack Developer">
     <meta property="og:description" content="Explore my portfolio to see my projects, experience, and contact details.">
     <meta property="og:url" content="https://manmohanboyina.netlify.app">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/around.min.css">
     <title>My Portfolio</title>
     <link rel="stylesheet" , href="style.css">
     <link rel="stylesheet" , href="mediaqueries.css">
@@ -151,8 +151,36 @@
                 <li><a href="#contact" onclick="togglemenu()">Contact</a></li>
             </div>
         </div>
-            <img src="./assets/darkmode.png" alt="My Github Profile" class="dark-mode-icon icon3">
-        
+        <label class="theme-toggle" title="Toggle theme">
+            <input type="checkbox" />
+            <span class="theme-toggle-sr">Toggle theme</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              width="2em"
+              height="2em"
+              fill="currentColor"
+              class="theme-toggle__around"
+              viewBox="0 0 32 32"
+            >
+              <clipPath id="theme-toggle__around__cutout">
+                <path d="M0 0h42v30a1 1 0 00-16 13H0Z" />
+              </clipPath>
+              <g clip-path="url(#theme-toggle__around__cutout)">
+                <circle cx="16" cy="16" r="8.4" />
+                <g>
+                  <circle cx="16" cy="3.3" r="2.3" />
+                  <circle cx="27" cy="9.7" r="2.3" />
+                  <circle cx="27" cy="22.3" r="2.3" />
+                  <circle cx="16" cy="28.7" r="2.3" />
+                  <circle cx="5" cy="22.3" r="2.3" />
+                  <circle cx="5" cy="9.7" r="2.3" />
+                </g>
+              </g>
+            </svg>
+          </label>
+
+
     </nav>
     <!-- <label for="switch" class="switch">
         <input id="switch" type="checkbox" />
@@ -247,7 +275,7 @@
         <p class="section__text__p1">Explore My</p>
         <h1 class="title">Experience</h1>
         <div class="experience-details-container">
-            
+
             <div class="about-containers">
                 <div class="details-container">
                     <h2 class="experience-sub-title">Frontend Development</h2>
@@ -380,119 +408,124 @@
                     </div>
                 </div>
             </div>
-            <img src="./assets/down-arrow1.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'">
+            <img src="./assets/down-arrow1.png" alt="Arrow icon" class="icon arrow"
+                onclick="location.href='./#projects'">
         </div>
-        
+
         <div></div>
     </section>
     <section id="projects">
         <div id="div-projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers1">
-                <div class="details-container1 color-container">
-                    <div class="article-container1">
-                        <img id="event-management-img" src="./assets/Stadium.webp" alt="Event Management System"
-                            class="project-img">
-                    </div>
+            <p class="section__text__p1">Browse My Recent</p>
+            <h1 class="title">Projects</h1>
+            <div class="experience-details-container">
+                <div class="about-containers1">
+                    <div class="details-container1 color-container">
+                        <div class="article-container1">
+                            <img id="event-management-img" src="./assets/Stadium.webp" alt="Event Management System"
+                                class="project-img">
+                        </div>
 
-                    <h2 class="experience-sub-title project-title">Event Management System</h2>
-                    <button
-                        onclick="window.open('https://github.com/ManmohanBoyina/Event-Management-System-FrontEnd.git','_blank')"
-                        class="card-button">View Code</button>
-                </div>
-                <div class="details-container1 color-contaier">
-                    <div class="article-container1">
-                        <img id="master-chef-img" src="./assets/MasterChefIMg.webp" alt="Master Chef"
-                            class="project-img">
+                        <h2 class="experience-sub-title project-title">Event Management System</h2>
+                        <button
+                            onclick="window.open('https://github.com/ManmohanBoyina/Event-Management-System-FrontEnd.git','_blank')"
+                            class="card-button">View Code</button>
                     </div>
-                    <h2 class="experience-sub-title project-title">Master Chef</h2>
-                    <button onclick="window.open('https://www.github.com/ManmohanBoyina/Master-Chef', '_blank')"
-                        class="card-button">View Code</button>
-                </div>
-                <div class="details-container1 color-contaier">
-                    <div class="article-container1">
-                        <img id="drowsiness-img" src="./assets/driver.webp" alt="Driver Drowsiness Detection"
-                            class="project-img">
+                    <div class="details-container1 color-contaier">
+                        <div class="article-container1">
+                            <img id="master-chef-img" src="./assets/MasterChefIMg.webp" alt="Master Chef"
+                                class="project-img">
+                        </div>
+                        <h2 class="experience-sub-title project-title">Master Chef</h2>
+                        <button onclick="window.open('https://www.github.com/ManmohanBoyina/Master-Chef', '_blank')"
+                            class="card-button">View Code</button>
                     </div>
-                    <h2 class="experience-sub-title project-title">Driver Drowsiness Detection</h2>
-                    <button
-                        onclick="window.open('https://github.com/ManmohanBoyina/DriverDrowsinessdetection.git','_blank')"
-                        class="card-button">View Code</button>
-                </div>
-                <div class="details-container1 color-contaier">
-                    <div class="article-container1">
-                        <img id="insider-jobs-img" src="./assets/Insiderr.webp" alt="Insider Jobs" class="project-img">
+                    <div class="details-container1 color-contaier">
+                        <div class="article-container1">
+                            <img id="drowsiness-img" src="./assets/driver.webp" alt="Driver Drowsiness Detection"
+                                class="project-img">
+                        </div>
+                        <h2 class="experience-sub-title project-title">Driver Drowsiness Detection</h2>
+                        <button
+                            onclick="window.open('https://github.com/ManmohanBoyina/DriverDrowsinessdetection.git','_blank')"
+                            class="card-button">View Code</button>
                     </div>
-                    <h2 class="experience-sub-title project-title">Insider Jobs</h2>
-                    <button onclick="window.open('https://github.com/ManmohanBoyina/InsiderJobs.git','_blank')"
-                        class="card-button">View Code</button>
-                </div>
-                <div class="details-container1 color-contaier">
-                    <div class="article-container1">
-                        <img id="student-management-system.img" src="./assets/Insiderr.webp" alt="Insider Jobs"
-                            class="project-img">
+                    <div class="details-container1 color-contaier">
+                        <div class="article-container1">
+                            <img id="insider-jobs-img" src="./assets/Insiderr.webp" alt="Insider Jobs"
+                                class="project-img">
+                        </div>
+                        <h2 class="experience-sub-title project-title">Insider Jobs</h2>
+                        <button onclick="window.open('https://github.com/ManmohanBoyina/InsiderJobs.git','_blank')"
+                            class="card-button">View Code</button>
                     </div>
-                    <h2 class="experience-sub-title project-title">Student Management System</h2>
-                    <button
-                        onclick="window.open('https://github.com/ManmohanBoyina/Student_Management_System','_blank')"
-                        class="card-button">View Code</button>
-                </div>
-                <div class="details-container1 color-container">
-                    <div class="article-container1">
-                        <img id="event-management1-img" src="./assets/Stadium.webp" alt="Event Management System"
-                            class="project-img">
+                    <div class="details-container1 color-contaier">
+                        <div class="article-container1">
+                            <img id="student-management-system.img" src="./assets/Insiderr.webp" alt="Insider Jobs"
+                                class="project-img">
+                        </div>
+                        <h2 class="experience-sub-title project-title">Student Management System</h2>
+                        <button
+                            onclick="window.open('https://github.com/ManmohanBoyina/Student_Management_System','_blank')"
+                            class="card-button">View Code</button>
                     </div>
+                    <div class="details-container1 color-container">
+                        <div class="article-container1">
+                            <img id="event-management1-img" src="./assets/Stadium.webp" alt="Event Management System"
+                                class="project-img">
+                        </div>
 
-                    <h2 class="experience-sub-title project-title">Event Management System</h2>
-                    <button
-                        onclick="window.open('https://github.com/ManmohanBoyina/Event-Management-System-FrontEnd.git','_blank')"
-                        class="card-button">View Code</button>
-                </div>
-                <div class="details-container1 color-contaier">
-                    <div class="article-container1">
-                        <img id="master-chef1-img" src="./assets/MasterChefIMg.webp" alt="Master Chef"
-                            class="project-img">
+                        <h2 class="experience-sub-title project-title">Event Management System</h2>
+                        <button
+                            onclick="window.open('https://github.com/ManmohanBoyina/Event-Management-System-FrontEnd.git','_blank')"
+                            class="card-button">View Code</button>
                     </div>
-                    <h2 class="experience-sub-title project-title">Master Chef</h2>
-                    <button onclick="window.open('https://www.github.com/ManmohanBoyina/Master-Chef', '_blank')"
-                        class="card-button">View Code</button>
-                </div>
-                <div class="details-container1 color-contaier">
-                    <div class="article-container1">
-                        <img id="drowsiness1-img" src="./assets/driver.webp" alt="Driver Drowsiness Detection"
-                            class="project-img">
+                    <div class="details-container1 color-contaier">
+                        <div class="article-container1">
+                            <img id="master-chef1-img" src="./assets/MasterChefIMg.webp" alt="Master Chef"
+                                class="project-img">
+                        </div>
+                        <h2 class="experience-sub-title project-title">Master Chef</h2>
+                        <button onclick="window.open('https://www.github.com/ManmohanBoyina/Master-Chef', '_blank')"
+                            class="card-button">View Code</button>
                     </div>
-                    <h2 class="experience-sub-title project-title">Driver Drowsiness Detection</h2>
-                    <button
-                        onclick="window.open('https://github.com/ManmohanBoyina/DriverDrowsinessdetection.git','_blank')"
-                        class="card-button">View Code</button>
-                </div>
-                <div class="details-container1 color-contaier">
-                    <div class="article-container1">
-                        <img id="insider-jobs1-img" src="./assets/Insiderr.webp" alt="Insider Jobs" class="project-img">
+                    <div class="details-container1 color-contaier">
+                        <div class="article-container1">
+                            <img id="drowsiness1-img" src="./assets/driver.webp" alt="Driver Drowsiness Detection"
+                                class="project-img">
+                        </div>
+                        <h2 class="experience-sub-title project-title">Driver Drowsiness Detection</h2>
+                        <button
+                            onclick="window.open('https://github.com/ManmohanBoyina/DriverDrowsinessdetection.git','_blank')"
+                            class="card-button">View Code</button>
                     </div>
-                    <h2 class="experience-sub-title project-title">Insider Jobs</h2>
-                    <button onclick="window.open('https://github.com/ManmohanBoyina/InsiderJobs.git','_blank')"
-                        class="card-button">View Code</button>
-                </div>
-                <div class="details-container1 color-contaier">
-                    <div class="article-container1">
-                        <img id="student-management-system1.img" src="./assets/Insiderr.webp" alt="Insider Jobs"
-                            class="project-img">
+                    <div class="details-container1 color-contaier">
+                        <div class="article-container1">
+                            <img id="insider-jobs1-img" src="./assets/Insiderr.webp" alt="Insider Jobs"
+                                class="project-img">
+                        </div>
+                        <h2 class="experience-sub-title project-title">Insider Jobs</h2>
+                        <button onclick="window.open('https://github.com/ManmohanBoyina/InsiderJobs.git','_blank')"
+                            class="card-button">View Code</button>
                     </div>
-                    <h2 class="experience-sub-title project-title">Student Management System</h2>
-                    <button class="card-button"
-                        onclick="window.open('https://github.com/ManmohanBoyina/Student_Management_System','_blank')">View
-                        Code</button>
+                    <div class="details-container1 color-contaier">
+                        <div class="article-container1">
+                            <img id="student-management-system1.img" src="./assets/Insiderr.webp" alt="Insider Jobs"
+                                class="project-img">
+                        </div>
+                        <h2 class="experience-sub-title project-title">Student Management System</h2>
+                        <button class="card-button"
+                            onclick="window.open('https://github.com/ManmohanBoyina/Student_Management_System','_blank')">View
+                            Code</button>
+                    </div>
                 </div>
             </div>
+            <div>
+
+            </div>
+            <img src="./assets/down-arrow1.png" alt="Arrow icon" class="icon2 arrow1"
+                onclick="location.href='./#contact'">
         </div>
-        <div>
-        
-    </div>
-    <img src="./assets/down-arrow1.png" alt="Arrow icon" class="icon2 arrow1" onclick="location.href='./#contact'"></div>
     </section>
     <script>
         // Function to fetch Open Graph images for GitHub repositories

@@ -20,8 +20,8 @@
     #hamburger-nav {
       display: flex;
       position: relative;
-      z-index: 10;
     }
+    
     #experience,
     .experience-details-container {
       margin-top: 2rem;

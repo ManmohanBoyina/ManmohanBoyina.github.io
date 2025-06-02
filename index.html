@@ -86,6 +86,15 @@
             }
         });
     </script>
+    <script>
+        function openDialogById(id) {
+          document.getElementById(id).showModal();
+        }
+      
+        function closeDialogById(id) {
+          document.getElementById(id).close();
+        }
+      </script>
 </head>
 
 <body>
@@ -244,16 +253,94 @@
                         <img src="./assets/browsing.png" alt="experience icon" class="icon">
                         <h3>Experience</h3>
                         <p>3+ Years <br />Software Developer</p>
-                        <div class="additional-details" id="additional-details" style="display: none;">
+                        <div class="icon-wrapper" onclick="document.getElementById('experienceDialog').showModal()">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                                 class="lucide lucide-external-link" style="cursor: pointer;">
+                              <path d="M15 3h6v6"></path>
+                              <path d="M10 14L21 3"></path>
+                              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            </svg>
+                          </div>                          
+                          <!-- Dialog -->
+                          <dialog id="experienceDialog" class="custom-dialog">
+                            <div style="font-family: Arial, sans-serif; padding: 20px; max-height: 80vh; overflow-y: auto; line-height: 1.6; text-align: left;">
+                                <h3 style="margin-bottom: 0;">
+                                  Verizon Data Services: <em>Software Developer-II</em>
+                                  <span style="float: right; font-weight: normal;">July 2021 – July 2023</span>
+                                </h3>
+                                <ul style="margin-top: 8px; padding-left: 20px;">
+                                  <li><strong>Frontend Development:</strong> Designed and developed responsive user interfaces using React.js and Angular.js with class and functional components, integrating React Hooks and React Router. Utilized UI libraries like Material-UI, Ant Design, and Bootstrap to deliver high-quality, reusable, and efficient web components.</li>
+                                  <li><strong>Backend Development:</strong> Built and maintained scalable server-side applications and RESTful APIs using Node.js and Express.js, ensuring high performance, security, and reliability.</li>
+                                  <li><strong>Database Management:</strong> Designed and managed MongoDB databases with expertise in schema design, indexing, and performance optimization. Utilized Mongoose for effective schema management and data handling.</li>
+                                  <li><strong>State Management and API Integration:</strong> Managed application state using Redux, implemented asynchronous actions with Thunk middleware, and integrated Axios for seamless data transfer between front-end and back-end systems.</li>
+                                  <li><strong>Software Development and Collaboration:</strong> Translated customer requirements into functional software solutions, managing design, testing, and deployment. Used JavaScript, modular programming, and async techniques to build efficient applications. Utilized Docker, Kubernetes, and Kibana for scalable deployments and performance monitoring.</li>
+                                </ul>
+                            
+                                <h3 style="margin-bottom: 0; margin-top: 20px;">
+                                  Verizon Data Services: <em>Software Developer-I</em>
+                                  <span style="float: right; font-weight: normal;">August 2020 – June 2021</span>
+                                </h3>
+                                <ul style="margin-top: 8px; padding-left: 20px;">
+                                  <li>Created Angular components and added Guidewire features to build single-page applications using clean, well-structured HTML. This helped cut development time by 40% and made the user experience much better.</li>
+                                  <li>Improved application performance by carefully checking JavaScript code using Chrome Developer Tools, which led to reducing memory issues and avoiding service interruptions.</li>
+                                  <li>Led QA and feature rollouts for a 10-member agile team to drive the development of a client portal, resulting in a 40% boost in client-reported satisfaction scores.</li>
+                                  <li>Streamlined package dependencies using npm and incorporated unit testing tools such as Jest and Selenium into the CI/CD pipeline, eliminating ~30 hours of manual testing per sprint and speeding up release cycles.</li>
+                                </ul>
+                              </div>
+                              <button style="margin-top: 20px; border-radius: 12px"  onclick="document.getElementById('experienceDialog').close()">Close</button>
+                          </dialog>
+                        <div class="additional-details" style="display: none;">
                             <p>Worked on several full-stack projects including RESTful APIs, responsive UIs, and
                                 scalable backend systems. Expertise in React, Node.js, and MongoDB.</p>
                         </div>
                     </div>
 
-                    <div class="details-container" id="education-container">
+                    <div class="details-container">
                         <img src="./assets/education1.png" alt="education icon" class="icon">
                         <h3>Education</h3>
                         <p>B.Sc Bachelor's Degree <br />M.Sc Master's Degree</p>
+                        <div class="icon-wrapper" onclick="document.getElementById('educationDialog').showModal()">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                                 class="lucide lucide-external-link" style="cursor: pointer;">
+                              <path d="M15 3h6v6"></path>
+                              <path d="M10 14L21 3"></path>
+                              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            </svg>
+                          </div>
+                          
+                          
+                          <!-- Dialog -->
+                          <dialog id="educationDialog" class="custom-dialog">
+                            <div style="font-family: Arial, sans-serif; padding: 20px; max-height: 80vh; overflow-y: auto; line-height: 1.6; text-align: left;">
+                              
+                                <h3 style="margin-bottom: 0; color: inherit;">
+                                MS in Computer Science | Indiana University
+                                <span style="float: right; font-weight: normal;">Aug 2023 – May 2025</span>
+                              </h3>
+                              <p style="margin-top: 4px;">Bloomington, IN</p>
+                              <ul style="margin-top: 6px; padding-left: 20px;">
+                                <li>Focused on software engineering, cloud computing, and machine learning.</li>
+                                <li>Developed multiple full-stack projects using React, Node.js, and MongoDB.</li>
+                                <li>Collaborated with teams on data science and NLP-based research projects.</li>
+                                <li>Maintaining a strong GPA while actively contributing to open-source projects.</li>
+                              </ul>
+                          
+                              <h3 style="margin-bottom: 0; margin-top: 20px;">
+                                Bachelor of Technology in Computer Science | Koneru Lakshmaiah University
+                                <span style="float: right; font-weight: normal;">June 2016 – May 2020</span>
+                              </h3>
+                              <p style="margin-top: 4px;">Vijayawada, India</p>
+                              <ul style="margin-top: 6px; padding-left: 20px;">
+                                <li>Completed core courses in data structures, algorithms, operating systems, and DBMS.</li>
+                                <li>Built an alumni association portal and an e-authentication system as major projects.</li>
+                                <li>Won awards in multiple technical competitions and coding challenges.</li>
+                                <li>Graduated with distinction and consistently ranked in the top 10% of the class.</li>
+                              </ul>
+                            </div>
+                            <button style="margin-top: 20px; border-radius: 12px" onclick="document.getElementById('educationDialog').close()">Close</button>
+                          </dialog>                          
                         <div class="additional-details" id="education-details" style="display: none;">
                             <p>Specialized in Computer Science. Bachelor's Degree from K L University. Master's Degree
                                 from Indiana University with a focus on Data Structures and Algorithms</Data>.</p>
@@ -270,7 +357,7 @@
                 </div>
             </div>
         </div>
-        <img src="./assets/down-arrow1.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'">
+        <img src="./assets/dr.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'">
     </section>
     <section id="experience">
         <p class="section__text__p1">Explore My</p>
@@ -409,7 +496,7 @@
                     </div>
                 </div>
             </div>
-            <img src="./assets/down-arrow1.png" alt="Arrow icon" class="icon arrow"
+            <img src="./assets/dr.png" alt="Arrow icon" class="icon arrow"
                 onclick="location.href='./#projects'">
         </div>
 
@@ -524,7 +611,7 @@
             <div>
 
             </div>
-            <img src="./assets/down-arrow1.png" alt="Arrow icon" class="icon2 arrow1"
+            <img src="./assets/dr.png" alt="Arrow icon" class="icon2 arrow1"
                 onclick="location.href='./#contact'">
         </div>
     </section>
